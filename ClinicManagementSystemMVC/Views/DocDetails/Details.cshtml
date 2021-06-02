@@ -1,0 +1,92 @@
+﻿@model ClinicManagementSystemMVC.Models.DocDetails
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>
+    You are Viewing Doctor's Details
+    <button class="btn btn-primary float-right" data-toggle="modal" data-target=".bs-example-modal-sm">Logout</button>
+
+    <div class="modal bs-example-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header"><h6>Logout <i class="fa fa-lock"></i></h6></div>
+                <div class="modal-body"><i class="fa fa-question-circle"></i><h6> Are you sure you want to log-off?</h6></div>
+                <div class="modal-footer"><a href="http://localhost:62274/Home/Index" class="btn btn-primary btn-block">Logout</a></div>
+            </div>
+        </div>
+    </div>
+
+
+    <button class="btn btn-danger float-right" data-toggle="modal" data-target=".menudiv">Menu</button>
+
+    <div class="modal bs-example-modal-sm menudiv" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header"><h6>Menu <i class="fa fa-lock"></i></h6></div>
+                <div class="modal-body"><i class="fa fa-question-circle"></i><h6> Are you sure you want to go to Home Page?</h6></div>
+                <div class="modal-footer"><a href="~/UserLogins/Success" class="btn btn-danger btn-block">Menu</a></div>
+            </div>
+        </div>
+    </div>
+</h1>
+
+<div>
+    
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Sex)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Sex)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Specialization)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Specialization)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FromTime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FromTime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ToTime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ToTime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.DoctorID">Edit</a> |
+    <a asp-action="Index">Back to Doctors</a>
+</div>
